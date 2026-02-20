@@ -1,3 +1,11 @@
+-- ======================================================
+-- KS4 Education Data Analysis
+-- File: 00_creat_table.sql
+-- Purpose: Creating table and data import
+-- Author: Georgia Losasso
+-- Date Uploaded: 20th February 2026
+-- ======================================================
+
 -- ==========================
 -- Table Creation
 -- ==========================
@@ -24,8 +32,7 @@ COPY ks4_national_characteristics(
 )
 
 -- NOTE: Update file path as appropriate for your local environment.
--- FROM '/path/to/ks4_202425_national_characteristics_clean.csv'
-FROM 'C:\SQL\Education_data\data\ks4_202425_national_characteristics_clean.csv'
+FROM '/path/to/ks4_202425_national_characteristics_clean.csv'
 DELIMITER ','
 CSV HEADER;
 
@@ -39,4 +46,5 @@ FROM ks4_national_characteristics;
 -- The original dataset contained 'z' values indicating suppressed or unavailable data.
 -- These values were converted to NULL in Excel prior to import.
 -- This ensures numeric columns are correctly interpreted and allows accurate aggregation.
+
 
